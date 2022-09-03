@@ -18,16 +18,16 @@
 - to print out column names || list(df)
 
 
-### Cleans the column names by getting rid of white space and special characters
+### Clean the column names by getting rid of white space and special characters
 - this command replaces spaces and special characters with and '_' || df.columns = df.columns.str.replace('[^A-Za-z0-9]+', '_') 
 - use this to make all letter of column names lower case || df.columns = df.columns.str.lower() 
 
 
-### Cleans the strings that might exist within each column
--
+### Clean the strings that might exist within each column
+- create and check list of columns that contain strings || strings = df.select_dtypes(include=['object']).columns
 
 
-### Converts the column types to the correct types (e.g., DOB field is datetime and not object)
+### Convert the column types to the correct types (e.g., DOB field is datetime and not object)
 - to display all columns and variable type || df.dtypes
 - to convert variable type || df['column_name'] = df['column_name'].astype(str)
 df['column_name'] = str(df['column_name'])
