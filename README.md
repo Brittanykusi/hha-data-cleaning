@@ -27,8 +27,7 @@
 -
 
 
-### Converts the column types to the correct types (e.g., DOB field is datetime and not
-object)
+### Converts the column types to the correct types (e.g., DOB field is datetime and not object)
 - to display all columns and variable type || df.dtypes
 - to convert variable type || df['column_name'] = df['column_name'].astype(str)
 df['column_name'] = str(df['column_name'])
