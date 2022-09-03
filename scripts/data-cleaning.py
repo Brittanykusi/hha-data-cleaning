@@ -66,14 +66,11 @@ df.isnull().sum()
 
 
 ## 10.New datafield: attempt to create a new column called modality_inperson. 
-## This column should contain a binary value of true or false. 
-## Try to write a function that takes in the old column name (learning modality), 
-## and recodes the value for a specific row to true, if the learning modality value is ‘in-person’, 
-## and recodes it to false if the value is either ‘remote’ or ‘hybrid’
-
-
-
+# create a new column and use where to place a boolean value on learning modality type - true if inperson and false if otherwise
 df['modality_inperson'] = pd.np.where(df.learning_modality.str.contains("In Person"), "true", "false")
+# view learning modality to cross check with modality inperson values
 df['learning_modality'] 
+# print modality in person
 df['modality_inperson']
+#print the first 50 rows of the table
 print(df.head(50))
